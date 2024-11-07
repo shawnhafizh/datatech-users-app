@@ -1,74 +1,73 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# User Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React-based web application for managing user data with CRUD functionality. This app allows users to add, edit, delete, and view user information, all while storing the data locally using localStorage. It includes a sortable table for easy viewing and interaction with user data.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User List**: Displays a list of users with their name, email, age, and status.
+- **Sort**: Allows sorting of users by name, email, age, and status.
+- **CRUD Operations**:
+  - **Add**: Add a new user to the list.
+  - **Edit**: Edit existing user information.
+  - **Delete**: Remove a user from the list.
+- **Persistent Storage**: User data is saved to localStorage so it persists between page reloads.
+- **Modal Form**: A modal form is used for adding and editing users.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the project locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the repository**:
 
-### `npm test`
+    ```bash
+    git clone https://github.com/yourusername/datatech-users-app.git
+    cd datatech-users-app
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install dependencies**: If you haven't installed Node.js and npm, download them [here](https://nodejs.org/).
 
-### `npm run build`
+    Then, install the required dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Run the development server**: After installation is complete, start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm start
+    ```
 
-### `npm run eject`
+4. Open your browser and go to `http://localhost:3000` to view the app.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## How it Works
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Main Component (`App.js`):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Initializes state variables such as `users`, `formData`, `isEditing`, etc.
+- Handles loading of user data from localStorage on mount using `useEffect`.
+- Provides functions for adding, editing, deleting, and sorting users.
+- Renders the user table (`UserTable`) and the modal form (`ModalForm`).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### User Table (`UserTable.js`):
 
-## Learn More
+- Displays a table with user data.
+- Allows sorting by column.
+- Displays action buttons to edit and delete users.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Modal Form (`ModalForm.js`):
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- A modal form used for adding new users or editing existing users.
+- Contains fields for name, email, age, and status.
 
-### Code Splitting
+## Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# datatech-users-app
->>>>>>> origin/main
+```bash
+/src
+  /components
+    NavBar.js         # Navigation bar (optional, can be customized)
+    UserTable.js      # Displays the user table and manages sorting/editing/deletion
+    ModalForm.js      # Modal for adding and editing users
+  App.js              # Main app component
+  App.css             # App-level styling
+  index.css           # Global styling
